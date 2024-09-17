@@ -1,6 +1,7 @@
-Feature: Listar um fato
+Feature: Teste de integração com cucumber e rest assured
 
-  Scenario: Existe um fato para ser exibido
-    Given um acesso a API
-    When uma request GET é feita ao endpoint
-    Then um fato é exibido
+  Scenario: Traduzir para Valiriano
+    Given uma frase
+    When envio a frase para a API de traducao Valyriana
+    Then o status code da API deve retornar 200
+    And a frase deve ser retornada traduzida para Valiryan
